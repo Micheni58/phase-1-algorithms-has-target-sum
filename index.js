@@ -1,6 +1,30 @@
+// function hasTargetSum(array, target) {
+  
+  
+//   for(let i = 0; i < array.length; i++){
+//     for(let secondIndex = i +1; secondIndex< array.length; secondIndex++){
+//       if(array[i] + array[secondIndex] ===target){
+//         console.log('True');
+//         return;
+//       }
+//     }
+//   }
+//   console.log('False');
+// }
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
+
+console.log(hasTargetSum([1, 2, 3, 4], 5));  
+console.log(hasTargetSum([1, 2, 3, 4], 10)); 
+
 
 /* 
   Write the Big O time complexity of your function here
